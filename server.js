@@ -18,7 +18,7 @@ const blockScanners = (req, res, next) => {
 };
 
 // Middleware
-app.use(cors({ origin: process.env.FRONTEND_URL || "http://localhost:5173" }));
+app.use(cors());
 
 // Handle CORS preflight for all routes
 // app.options("*", cors({ origin: process.env.FRONTEND_URL || "http://localhost:5173" }));
