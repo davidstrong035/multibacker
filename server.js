@@ -21,7 +21,8 @@ const blockScanners = (req, res, next) => {
 app.use(cors({ origin: process.env.FRONTEND_URL || "http://localhost:5173" }));
 
 // Handle CORS preflight for all routes
-app.options("*", cors({ origin: process.env.FRONTEND_URL || "http://localhost:5173" }));
+// app.options("*", cors({ origin: process.env.FRONTEND_URL || "http://localhost:5173" }));
+app.options("*", cors());
 app.use(express.json());
 
 function buildEmailBody(fields, ip) {
